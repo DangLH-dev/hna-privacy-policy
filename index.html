@@ -1,373 +1,252 @@
 ﻿<!doctype html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HNA iCard Privacy Policy</title>
     <style>
       :root {
-        --bg: #f4f7fb;
-        --card: #ffffff;
-        --text: #132131;
-        --muted: #385065;
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #4b5563;
+        --border: #e5e7eb;
         --accent: #0f766e;
-        --accent-2: #0b4f87;
-        --border: #dce6ef;
-        --warn-bg: #fff9ea;
-        --warn-border: #ffdf9c;
       }
       * { box-sizing: border-box; }
       body {
         margin: 0;
-        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        background: var(--bg);
         color: var(--text);
-        background: linear-gradient(180deg, #eaf1ff 0%, var(--bg) 35%, var(--bg) 100%);
       }
       .container {
-        max-width: 1080px;
+        max-width: 860px;
         margin: 0 auto;
-        padding: 24px 16px 40px;
+        padding: 36px 18px 56px;
       }
-      .hero {
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: #fff;
-        border-radius: 14px;
-        padding: 20px;
-        box-shadow: 0 10px 26px rgba(11, 79, 135, 0.25);
-      }
-      .hero h1 {
-        margin: 0 0 6px;
+      h1 {
+        margin: 0 0 8px;
         font-size: 34px;
         line-height: 1.2;
+        letter-spacing: -0.02em;
       }
-      .subtitle {
-        margin: 0;
-        font-size: 18px;
-        font-weight: 700;
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 21px;
+        line-height: 1.35;
+      }
+      h3 {
+        margin: 24px 0 8px;
+        font-size: 17px;
+      }
+      p, li {
+        font-size: 15px;
+        line-height: 1.72;
+        color: var(--muted);
+      }
+      ul {
+        margin: 8px 0 0 20px;
+        padding: 0;
       }
       .meta {
-        margin-top: 10px;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 12px 0;
+        margin: 16px 0 22px;
+        color: var(--muted);
         font-size: 14px;
-        line-height: 1.55;
-        color: #ecf7ff;
       }
-      .meta strong { color: #fff; }
-
-      .summary {
-        margin-top: 16px;
-        background: var(--card);
+      .meta strong { color: var(--text); }
+      .toc {
         border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 16px;
+        border-radius: 10px;
+        padding: 14px 16px;
+        background: #fafafa;
       }
-      .summary h2 {
-        margin: 0 0 10px;
-        color: var(--accent);
-        font-size: 20px;
+      .toc p {
+        margin: 0 0 8px;
+        font-size: 14px;
+        color: var(--text);
+        font-weight: 600;
       }
-      .summary ul {
+      .toc ol {
         margin: 0;
         padding-left: 20px;
-        color: var(--muted);
       }
-      .summary li { margin-bottom: 6px; line-height: 1.5; }
-
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-        margin-top: 16px;
-      }
-      @media (min-width: 980px) {
-        .grid { grid-template-columns: 1fr 1fr; }
-      }
-
-      .card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 18px;
-      }
-      .card h2 {
-        margin: 0 0 8px;
-        color: var(--accent);
-        font-size: 30px;
-      }
-      .card h3 {
-        margin: 14px 0 6px;
-        font-size: 25px;
-      }
-      .card p,
-      .card li {
-        color: var(--muted);
-        font-size: 23px;
-        line-height: 1.62;
-      }
-      .card ul { margin: 6px 0 0 20px; padding: 0; }
-
-      .table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 8px;
+      .toc li {
+        margin: 2px 0;
         font-size: 14px;
       }
-      .table th,
-      .table td {
-        border: 1px solid var(--border);
-        padding: 8px;
-        text-align: left;
-        vertical-align: top;
+      .label {
+        display: inline-block;
+        margin-top: 4px;
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
       }
-      .table th {
-        background: #f0f6fc;
-        color: #17324a;
-      }
-
       .note {
-        margin-top: 16px;
-        background: var(--warn-bg);
-        border: 1px solid var(--warn-border);
-        border-radius: 10px;
-        padding: 12px;
-        color: #6d550a;
-        font-size: 13px;
-      }
-      code {
-        background: #eef2f7;
-        border: 1px solid #d8e1eb;
+        margin-top: 28px;
+        padding: 12px 14px;
+        border-left: 3px solid var(--accent);
+        background: #f8fffd;
         border-radius: 6px;
-        padding: 2px 6px;
       }
       .footer {
-        margin-top: 16px;
-        font-size: 12px;
-        color: #6f8192;
+        margin-top: 34px;
+        color: #6b7280;
+        font-size: 13px;
       }
+      a { color: #0b5cab; text-decoration: none; }
+      a:hover { text-decoration: underline; }
     </style>
   </head>
   <body>
     <main class="container">
-      <section class="hero">
-        <h1>HNA iCard Privacy Policy</h1>
-        <p class="subtitle">Chính Sách Bảo Mật HNA iCard</p>
-        <p class="meta">
-          Last updated / Cập nhật lần cuối: <strong>19/04/2026</strong> | Effective date / Ngày hiệu lực:
-          <strong>19/04/2026</strong><br />
-          Controller / Đơn vị vận hành: <strong>Lê Hải Đăng</strong> | Contact / Liên hệ:
-          <strong>haidang.lhd@gmail.com</strong>
-        </p>
-      </section>
+      <h1>HNA iCard Privacy Policy</h1>
+      <div class="label">Privacy Notice</div>
 
-      <section class="summary">
-        <h2>Store Review Summary</h2>
-        <ul>
-          <li>No sale of personal data. No advertising SDK. No cross-app tracking.</li>
-          <li>Permissions are used only for core app functions (QR scan and BLE reader connection).</li>
-          <li>Production app uses secure transport (HTTPS) for backend communication.</li>
-          <li>Users can deny or revoke permissions in OS settings at any time.</li>
-        </ul>
-      </section>
-
-      <section class="grid">
-        <article class="card">
-          <h2>Chính Sách Bảo Mật (VI)</h2>
-          <p><strong>Đơn vị vận hành:</strong> Lê Hải Đăng</p>
-
-          <h3>1. Phạm vi áp dụng</h3>
-          <p>
-            Chính sách này áp dụng cho ứng dụng iCard System (HNA iCard) trên Android và iOS.
-            Chính sách mô tả cách dữ liệu được truy cập, sử dụng, lưu trữ và bảo vệ.
-          </p>
-
-          <h3>2. Dữ liệu ứng dụng có thể truy cập</h3>
-          <ul>
-            <li><strong>Camera:</strong> quét mã QR kích hoạt.</li>
-            <li><strong>Bluetooth:</strong> tìm và kết nối đầu đọc RFID BLE.</li>
-            <li><strong>Thư viện ảnh:</strong> đọc ảnh do người dùng chủ động chọn để quét QR.</li>
-            <li>
-              <strong>Dữ liệu cục bộ:</strong> cài đặt server, lịch sử thiết bị, thống kê kết nối,
-              dữ liệu kích hoạt/vận hành (lưu trên thiết bị).
-            </li>
-          </ul>
-
-          <h3>3. Mục đích sử dụng dữ liệu</h3>
-          <ul>
-            <li>Kích hoạt thiết bị bằng QR.</li>
-            <li>Thiết lập và duy trì kết nối BLE.</li>
-            <li>Hỗ trợ vận hành ngoại tuyến theo chính sách hệ thống.</li>
-            <li>Lưu cấu hình và trạng thái vận hành cần thiết.</li>
-          </ul>
-
-          <h3>4. Cơ sở xử lý dữ liệu</h3>
-          <ul>
-            <li><strong>Sự đồng ý:</strong> khi người dùng cấp quyền camera/bluetooth/thư viện ảnh.</li>
-            <li><strong>Thực hiện dịch vụ:</strong> để cung cấp chức năng cốt lõi của ứng dụng.</li>
-            <li><strong>Lợi ích hợp pháp:</strong> duy trì bảo mật và độ ổn định của hệ thống.</li>
-          </ul>
-
-          <h3>5. Chia sẻ dữ liệu</h3>
-          <ul>
-            <li>Không bán dữ liệu cá nhân.</li>
-            <li>Dữ liệu chỉ gửi đến backend phục vụ chức năng ứng dụng.</li>
-            <li>Không dùng quảng cáo và không tracking quảng cáo.</li>
-          </ul>
-
-          <h3>6. Lưu giữ dữ liệu</h3>
-          <p>
-            Dữ liệu cục bộ được lưu cho đến khi người dùng gỡ ứng dụng hoặc xóa dữ liệu trong
-            ứng dụng/hệ điều hành. Dữ liệu truyền về backend được lưu theo chính sách vận hành
-            hệ thống và yêu cầu pháp luật áp dụng.
-          </p>
-
-          <h3>7. Bảo mật dữ liệu</h3>
-          <ul>
-            <li>Sử dụng cơ chế lưu trữ an toàn trên thiết bị cho dữ liệu nhạy cảm.</li>
-            <li>Kết nối production sử dụng HTTPS.</li>
-            <li>Áp dụng nguyên tắc tối thiểu hóa quyền truy cập.</li>
-          </ul>
-
-          <h3>8. Quyền của người dùng</h3>
-          <ul>
-            <li>Quyền từ chối hoặc thu hồi quyền truy cập trong cài đặt hệ điều hành.</li>
-            <li>Quyền yêu cầu hỗ trợ liên quan dữ liệu qua email liên hệ.</li>
-          </ul>
-
-          <h3>9. Trẻ em</h3>
-          <p>
-            Ứng dụng không được thiết kế chuyên biệt cho trẻ em dưới độ tuổi luật định tại khu
-            vực của bạn.
-          </p>
-
-          <h3>10. Cập nhật chính sách</h3>
-          <p>
-            Chính sách có thể được cập nhật theo thời gian. Phiên bản mới nhất luôn được đăng tại
-            URL chính thức của trang này.
-          </p>
-        </article>
-
-        <article class="card">
-          <h2>Privacy Policy (EN)</h2>
-          <p><strong>Operated by:</strong> Le Hai Dang</p>
-
-          <h3>1. Scope</h3>
-          <p>
-            This Privacy Policy applies to the iCard System (HNA iCard) app on Android and iOS.
-            It explains how data is accessed, used, stored, and protected.
-          </p>
-
-          <h3>2. Data and permissions we may access</h3>
-          <ul>
-            <li><strong>Camera:</strong> to scan activation QR codes.</li>
-            <li><strong>Bluetooth:</strong> to discover and connect RFID BLE readers.</li>
-            <li><strong>Photo Library:</strong> when users explicitly select an image for QR scanning.</li>
-            <li>
-              <strong>Local data:</strong> server settings, device history, connection statistics,
-              and activation/runtime data stored on device.
-            </li>
-          </ul>
-
-          <h3>3. Purposes of processing</h3>
-          <ul>
-            <li>Activate devices via QR.</li>
-            <li>Establish and maintain BLE reader connections.</li>
-            <li>Support offline operation based on system policy.</li>
-            <li>Store required app settings and operational state.</li>
-          </ul>
-
-          <h3>4. Legal bases</h3>
-          <ul>
-            <li><strong>Consent:</strong> when users grant camera/bluetooth/photo permissions.</li>
-            <li><strong>Service performance:</strong> to deliver core app functionality.</li>
-            <li><strong>Legitimate interests:</strong> security, reliability, and fraud prevention.</li>
-          </ul>
-
-          <h3>5. Data sharing</h3>
-          <ul>
-            <li>We do not sell personal data.</li>
-            <li>Data is shared only with backend services required for app functionality.</li>
-            <li>No ad SDK and no advertising tracking.</li>
-          </ul>
-
-          <h3>6. Retention</h3>
-          <p>
-            Local data is retained until users uninstall the app or clear app/device data. Backend
-            data retention follows operational requirements and applicable law.
-          </p>
-
-          <h3>7. Data security</h3>
-          <ul>
-            <li>Secure on-device storage mechanisms are used for sensitive local data.</li>
-            <li>Production communication uses HTTPS transport security.</li>
-            <li>Access follows the principle of least privilege.</li>
-          </ul>
-
-          <h3>8. User rights</h3>
-          <ul>
-            <li>Users can deny or revoke permissions in OS settings at any time.</li>
-            <li>Users may request data-related support via the contact email.</li>
-          </ul>
-
-          <h3>9. Children</h3>
-          <p>
-            The app is not specifically directed to children under the legal age in the relevant
-            jurisdiction.
-          </p>
-
-          <h3>10. Policy updates</h3>
-          <p>
-            We may update this policy from time to time. The latest version is always available at
-            this official page URL.
-          </p>
-        </article>
-      </section>
-
-      <section class="card" style="margin-top: 16px;">
-        <h2 style="font-size: 20px; margin-bottom: 10px;">Data Category Matrix (Quick Reference)</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Collected</th>
-              <th>Shared</th>
-              <th>Purpose</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Camera access</td>
-              <td>Yes (permission use)</td>
-              <td>No</td>
-              <td>QR activation scan</td>
-            </tr>
-            <tr>
-              <td>Bluetooth access</td>
-              <td>Yes (permission use)</td>
-              <td>No</td>
-              <td>Discover/connect BLE reader</td>
-            </tr>
-            <tr>
-              <td>Photo library access</td>
-              <td>Yes (user-selected only)</td>
-              <td>No</td>
-              <td>Scan QR from selected image</td>
-            </tr>
-            <tr>
-              <td>Local app settings/runtime data</td>
-              <td>Yes (on-device)</td>
-              <td>Only when required by backend function</td>
-              <td>Configuration and app operation</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="note">
-        Official policy URL: <code>https://danglh-dev.github.io/hna-privacy-policy/</code>
-      </section>
-
-      <div class="footer">
-        © 2026 Le Hai Dang. All rights reserved.
+      <div class="meta">
+        <strong>Controller / Operator:</strong> Le Hai Dang<br />
+        <strong>Contact:</strong> haidang.lhd@gmail.com<br />
+        <strong>Effective date:</strong> April 19, 2026<br />
+        <strong>Last updated:</strong> April 19, 2026
       </div>
+
+      <p>
+        This Privacy Policy explains how the iCard System (HNA iCard) mobile application
+        (“App”, “we”, “our”, or “us”) collects, uses, stores, and shares information when you
+        use the App on Android or iOS.
+      </p>
+
+      <section class="toc">
+        <p>Contents</p>
+        <ol>
+          <li>Scope</li>
+          <li>Information We Process</li>
+          <li>How We Use Information</li>
+          <li>Legal Bases for Processing</li>
+          <li>Sharing and Recipients</li>
+          <li>Data Retention</li>
+          <li>Data Security</li>
+          <li>Your Rights and Choices</li>
+          <li>Children’s Privacy</li>
+          <li>International Transfers</li>
+          <li>Changes to This Policy</li>
+          <li>Contact Us</li>
+        </ol>
+      </section>
+
+      <h2>1. Scope</h2>
+      <p>
+        This Policy applies to the iCard System (HNA iCard) application and related backend
+        services required to provide core activation and BLE reader connectivity features.
+      </p>
+
+      <h2>2. Information We Process</h2>
+      <h3>2.1 Permissions and On-Device Data</h3>
+      <ul>
+        <li><strong>Camera access</strong> to scan activation QR codes.</li>
+        <li><strong>Bluetooth access</strong> to discover and connect supported RFID BLE readers.</li>
+        <li><strong>Photo library access</strong> when you explicitly select an image for QR scanning.</li>
+        <li>
+          <strong>Local configuration/runtime data</strong> such as server settings, connection history,
+          activation/runtime records, and app preferences stored on your device.
+        </li>
+      </ul>
+
+      <h3>2.2 Network Data</h3>
+      <p>
+        To provide app functionality, the App may transmit required activation/runtime fields to
+        backend endpoints over secure transport in production environments.
+      </p>
+
+      <h2>3. How We Use Information</h2>
+      <ul>
+        <li>Activate devices through QR-based workflows.</li>
+        <li>Establish and maintain BLE reader sessions.</li>
+        <li>Support policy-controlled offline operation.</li>
+        <li>Persist necessary app state and user configuration.</li>
+        <li>Improve reliability, diagnose operational errors, and maintain service security.</li>
+      </ul>
+
+      <h2>4. Legal Bases for Processing</h2>
+      <p>Depending on your jurisdiction, we rely on one or more of the following legal bases:</p>
+      <ul>
+        <li><strong>Consent</strong> (for device permissions such as camera/Bluetooth/photos).</li>
+        <li><strong>Performance of a contract/service</strong> (to deliver core app functionality).</li>
+        <li><strong>Legitimate interests</strong> (security, fraud prevention, service integrity).</li>
+        <li><strong>Legal obligations</strong> (where required by applicable law).</li>
+      </ul>
+
+      <h2>5. Sharing and Recipients</h2>
+      <p>
+        We do not sell your personal data. We share information only where necessary to operate
+        core app functionality, including backend infrastructure and service providers acting on
+        our instructions.
+      </p>
+      <p>
+        We do not use third-party advertising SDKs for behavioral advertising within this App.
+      </p>
+
+      <h2>6. Data Retention</h2>
+      <p>
+        On-device data is retained until you uninstall the App or clear app/device data (where
+        supported). Server-side data is retained only for as long as needed for legitimate
+        operational/legal purposes and then deleted or anonymized according to internal policies.
+      </p>
+
+      <h2>7. Data Security</h2>
+      <p>
+        We implement technical and organizational controls designed to protect data against
+        unauthorized access, alteration, disclosure, or destruction. No method of transmission or
+        storage is 100% secure, but we continuously improve safeguards appropriate to risk.
+      </p>
+
+      <h2>8. Your Rights and Choices</h2>
+      <p>Depending on your jurisdiction, you may have rights to:</p>
+      <ul>
+        <li>Access, correct, or delete your data.</li>
+        <li>Restrict or object to certain processing.</li>
+        <li>Withdraw consent for permission-based processing.</li>
+        <li>Request portability where legally applicable.</li>
+      </ul>
+      <p>
+        You can also manage device permissions at any time in Android/iOS settings. If required
+        permissions are denied, some features may not function.
+      </p>
+
+      <h2>9. Children’s Privacy</h2>
+      <p>
+        The App is not directed to children under the legal age in relevant jurisdictions. If you
+        believe a child provided personal information, contact us so we can take appropriate steps.
+      </p>
+
+      <h2>10. International Transfers</h2>
+      <p>
+        If data is processed outside your country, we apply safeguards required under applicable
+        law to protect transferred information.
+      </p>
+
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Policy from time to time. Material updates will be reflected by
+        updating the “Last updated” date on this page.
+      </p>
+
+      <h2>12. Contact Us</h2>
+      <p>
+        For privacy-related requests or questions, contact:<br />
+        <strong>Le Hai Dang</strong><br />
+        <strong>Email:</strong> <a href="mailto:haidang.lhd@gmail.com">haidang.lhd@gmail.com</a>
+      </p>
+
+      <div class="note">
+        Official policy URL: <code>https://danglh-dev.github.io/hna-privacy-policy/</code>
+      </div>
+
+      <div class="footer">© 2026 Le Hai Dang. All rights reserved.</div>
     </main>
   </body>
 </html>
