@@ -18,6 +18,7 @@
         font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
         background: var(--bg);
         color: var(--text);
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
       .container {
         max-width: 860px;
@@ -100,6 +101,36 @@
       }
       a { color: #0b5cab; text-decoration: none; }
       a:hover { text-decoration: underline; }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --text: #e5e7eb;
+          --muted: #b9c3d3;
+          --border: #243147;
+          --accent: #5eead4;
+        }
+        body {
+          background: var(--bg);
+          color: var(--text);
+        }
+        .toc {
+          background: #111a2b;
+          border-color: var(--border);
+        }
+        .toc p { color: var(--text); }
+        .note {
+          background: #0f1d1d;
+          border-left-color: #3dd7c0;
+        }
+        code {
+          background: #111827;
+          border-color: #2b3a53;
+          color: #dbeafe;
+        }
+        .footer { color: #9aa8bf; }
+        a { color: #7cc7ff; }
+      }
     </style>
   </head>
   <body>
